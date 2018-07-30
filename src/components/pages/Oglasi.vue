@@ -4,13 +4,12 @@
     <p class="subjumbo">Če bi vlado sestavljala koalicija civilnodružbenih organizacij, bi kandidate in kandidatke izbirali s pomočjo spodnjih oglasov za delo!</p>
     <div class="major-container dropdown-container">
       <select
-        @change="goTo(selectedAd)"
+        @change="goTo"
+        v-model="selectedAd"
       >
         <option
-          v-model="selectedAd"
           v-for="(ad, i) in ads"
-          value="i"
-          @click="selectAd(i)"
+          :value="i"
         >{{ ad.title }}</option>
       </select>
     </div>
@@ -115,9 +114,9 @@ export default {
     share() {
       TheFooter.methods.fbShare();
     },
-    goTo(i) {
+    goTo() {
       this.$router.push({
-        path: `/oglas/${i}`,
+        path: `/oglas/${this.selectedAd}`,
       });
     },
   },
