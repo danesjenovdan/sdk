@@ -295,10 +295,18 @@ export default {
     
     position: relative;
 
+    @media (max-width: 992px) {
+      background-size: 200px;
+    }
+
     .regular-button {
       position: absolute;
       right: 0;
       top: 240px;
+
+      @media (max-width: 992px) {
+        top: 160px;
+      }
     }
 
     .progress-bar-container {
@@ -370,8 +378,8 @@ export default {
       color: #7147dd;
       width: 100%;
       display: block;
-      height: 30px;
       padding-left: 40px;
+      padding-bottom: 20px;
       font-weight: 700;
       text-decoration: none;
 

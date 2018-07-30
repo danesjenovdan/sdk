@@ -28,9 +28,9 @@ export default {
 
   data() {
     return {
-      title: 'Oglasi',
-      text: 'Tekst za OG',
-      hashtags: '#hashtag',
+      title: 'Povolilna kombinatorika',
+      text: 'Zavrnimo povolilno trgovanje s pozicijami, fokus naj bo na vsebinah in kompetencah!',
+      hashtags: '#sestavivlado',
       link: '',
     };
   },
@@ -43,7 +43,7 @@ export default {
 
   methods: {
     fbShare() {
-      const url = `https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=${encodeURIComponent(document.location.href)}&link=${encodeURIComponent(document.location.href)}&ref=responsive&name=${encodeURIComponent(this.title)}`;
+      const url = `https://www.facebook.com/dialog/feed?app_id=833917570125908&redirect_uri=${encodeURIComponent(document.location.href)}&link=${encodeURIComponent(document.location.href)}&ref=responsive`;
       window.open(url, '_blank');
     },
     twShare() {
