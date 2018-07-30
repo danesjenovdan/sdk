@@ -38,7 +38,7 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
     //   renderOg(templatePath, snippetData, ogImagePath);
     // }
 
-    $('title').text(`${analysisData.title || 'Brez naslova'} - Besedogled`);
+    $('title').text(`${ads[req.params.oglasId].og_title}`);
     $('.removeme').remove();
     // <meta property="og:image"          content="${config.URL}/images/snippet-${snippetId}.png" />
     // <meta name="twitter:image" content="${config.URL}/images/snippet-${snippetId}.png">
@@ -50,49 +50,6 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
       
       <meta name="twitter:title" content="${ads[req.params.oglasId].og_title}" />
       <meta name="twitter:description" content="${ads[req.params.oglasId].og_description}" />
-      <meta name="twitter:image" content="https://sestavivlado.si/static/koalicija.png /">
-    `);
-
-    res.send($.html());
-
-  } catch ( err ) {
-    console.log(err);
-    res.status(400).send('Something went wrong');
-  }
-
-});
-
-app.get('/oglasi', async ( req, res ) => {
-
-  try {
-
-    // const analysisId    = req.params.analysisId;
-    // const templatePath = `${__dirname}/og_templates/snippet.ejs`;
-    // const ogImagePath  = `${__dirname}/og_renders/snippet-${snippetId}.png`;
-    const $ = cheerio.load(indexHtml);
-
-    // const ogExists = await new Promise(( resolve ) => {
-    //   fs.exists(`${__dirname}/og_renders/snippet-${snippetId}.png`, ( exists ) => resolve(exists));
-    // });
-
-    // get analysis data from API
-    // const analysisData = JSON.parse(await request(`http://admin.besedogled.si/getAnalysisMeta/?id=${analysisId}`));
-
-    // if ( !ogExists ) {
-    //   console.log(`Og count: ${ogCount}`);
-    //   ogCount++;
-    //   renderOg(templatePath, snippetData, ogImagePath);
-    // }
-
-    $('.removeme').remove();
-    // <meta property="og:image"          content="${config.URL}/images/snippet-${snippetId}.png" />
-    // <meta name="twitter:image" content="${config.URL}/images/snippet-${snippetId}.png">
-    $('head').append(`
-      <meta property="og:type" content="article" />
-      <meta property="og:title" content="${analysisData.title || 'Analiza brez naslova'}" />
-      <meta property="og:image" content="https://sestavivlado.si/static/koalicija.png" />
-      
-      <meta name="twitter:title" content="${analysisData.title || 'Analiza brez naslova'}" />
       <meta name="twitter:image" content="https://sestavivlado.si/static/koalicija.png /">
     `);
 

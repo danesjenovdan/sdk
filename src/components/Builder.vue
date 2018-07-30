@@ -116,7 +116,7 @@ export default {
       document.getElementsByTagName('body')[0].className += ' rotate';
       // document.getElementsByTagName('body')[0].style.transform = 'rotate(180deg)';
       setTimeout(() => {
-        this.$router.push({ path: 'oglasi' });
+        this.$router.push({ path: 'oglas/0' });
       }, 1350);
 
       setTimeout(() => {
