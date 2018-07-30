@@ -26,6 +26,8 @@ export default {
   background-color: transparent;
   color: #ffffff;
 
+  position: relative;
+
   border: none;
   box-shadow: none;
   padding: 0;

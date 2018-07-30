@@ -36,6 +36,11 @@
         class="button-container"
       >
         <regular-button
+          caption="Poskusi znova"
+          @click.native="clear"
+          color="green"
+        ></regular-button>
+        <regular-button
           caption="Poskusi drugače"
           @click.native="flipAndGo"
         ></regular-button>
@@ -112,6 +117,12 @@ export default {
         this.chooseParties();
       }
     },
+
+    clear() {
+      this.numHighlighted = 0;
+      this.selectedParties = [];
+    },
+
     flipAndGo() {
       document.getElementsByTagName('body')[0].className += ' rotate';
       // document.getElementsByTagName('body')[0].style.transform = 'rotate(180deg)';

@@ -52,6 +52,13 @@ body {
   margin: auto;
 }
 
+@media (max-width: 992px) {
+  .app-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .highlight {
   color: #7147dd;
 }

@@ -3,7 +3,9 @@
     <p class="jumbo">Ni prav, da se vlada oblikuje na način trgovanja s pozicijami, funkcijami in močjo, ki je cinično zapakirano v sestanke za preverjanje stališč in vsebinsko povezovanje. Če želimo dobro vlado, je treba uveljavljen proces obrniti na glavo in namesto ministrstev za posamezne apetite poiskati vsebinsko najboljše ministrice in ministrice!</p>
     <p class="subjumbo">Če bi vlado sestavljala koalicija civilnodružbenih organizacij, bi kandidate in kandidatke izbirali s pomočjo spodnjih oglasov za delo!</p>
     <div class="major-container dropdown-container">
-      <select>
+      <select
+        @change="goTo(selectedAd)"
+      >
         <option
           v-model="selectedAd"
           v-for="(ad, i) in ads"
@@ -67,7 +69,9 @@
         v-for="org in orgs"
         :href="org.link"
         target="_blank"
+        v-if="org.link !== ''"
       >{{ org.name }}</a>
+      <span v-else>{{ org.name }}</span>
     </div>
   </div>
 </template>
@@ -111,11 +115,15 @@ export default {
     share() {
       TheFooter.methods.fbShare();
     },
+    goTo(i) {
+      this.$router.push({
+        path: `/oglas/${i}`,
+      });
+    },
   },
 
   mounted() {
     this.$http.get(`https://graph.facebook.com/?id=${document.location.href}`).then((response) => {
-      console.log(response);
       this.current = response.body.share.share_count;
     });
   },
@@ -136,6 +144,11 @@ export default {
 
     text-align: left;
     max-width: 861px;
+
+    @media (max-width: 992px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   .jumbo {
@@ -148,8 +161,13 @@ export default {
     /* Text style for "Ni prav, d" */
     line-height: 40px;
     .light {
-    /* Text style for "Če želimo" */
-    color: #3a3653;
+      /* Text style for "Če želimo" */
+      color: #3a3653;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 16px;
+      line-height: 32px;
     }
 
     margin-top: 60px;
@@ -167,6 +185,11 @@ export default {
 
     margin-top: 60px;
     margin-bottom: 60px;
+
+    @media (max-width: 992px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   .major-container {
@@ -269,6 +292,10 @@ export default {
           padding-bottom: 31px;
         }
       }
+
+      @media (max-width: 992px) {
+        font-size: 14px;
+      }
     }
 
     p {
@@ -336,6 +363,11 @@ export default {
 
       margin-bottom: 0;
 
+      @media (max-width: 992px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
       span {
         color: #26a6b5;
       }
@@ -351,6 +383,11 @@ export default {
 
       text-align: right;
       float: right;
+
+      @media (max-width: 992px) {
+        font-size: 16px;
+        line-height: 32px;
+      }
     }
 
     @media (max-width: 992px) {
@@ -374,9 +411,9 @@ export default {
       width: 100%;
     }
 
-    a {
+    a, span {
       color: #7147dd;
-      width: 100%;
+      width: 80%;
       display: block;
       padding-left: 40px;
       padding-bottom: 20px;
@@ -386,6 +423,10 @@ export default {
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    span:hover {
+      text-decoration: none;
     }
   }
 }
