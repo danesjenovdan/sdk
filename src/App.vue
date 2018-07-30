@@ -3,7 +3,7 @@
     <div class="app-container">
       <router-view/>
     </div>
-    <the-footer :key="$route.fullPath"></the-footer>
+    <the-footer :key="$route.fullPath" :class="$route.fullPath.match(/\w+/)"></the-footer>
   </div>
 </template>
 
@@ -14,6 +14,10 @@ export default {
   name: 'App',
 
   components: { TheFooter },
+
+  mounted() {
+    console.log(this.$route.fullPath);
+  },
 };
 </script>
 

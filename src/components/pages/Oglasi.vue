@@ -384,7 +384,7 @@ export default {
 </style>
 
 <style lang="scss">
-  #footer {
+  #footer.oglas {
     position: relative;
     width: 100%;
   }
