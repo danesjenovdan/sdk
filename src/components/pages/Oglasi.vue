@@ -40,7 +40,7 @@
           <ul v-if="ads[selectedAd].firstBullets.length > 0">
             <li v-for="bullet in ads[selectedAd].thirdBullets" v-html="bullet"></li>
           </ul>
-          <p>{{ ads[selectedAd].extra }}</p>
+          <p v-if="ads[selectedAd].extra !== ''">{{ ads[selectedAd].extra }}</p>
         </big-card>
       </div>
     </div>
