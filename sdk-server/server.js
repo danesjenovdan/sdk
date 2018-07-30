@@ -13,6 +13,12 @@ let ogCount = 0;
 const indexFile = fs.readFileSync(`${__dirname}/../dist/index.html`, 'utf8', ( err, file ) => err ? reject(err) : resolve(file));
 const indexHtml = indexFile.toString();
 
+// load ads
+const jsonFile = fs.readFileSync(`${__dirname}/../src/assets/ads.json`, 'utf8', (err, file) => err ? reject(err) : resolve(file));
+const ads = JSON.parse(jsonFile.toString());
+
+console.log(ads);
+
 app.get('/oglas/:oglasId', async ( req, res ) => {
 
   try {
@@ -38,10 +44,12 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
     // <meta name="twitter:image" content="${config.URL}/images/snippet-${snippetId}.png">
     $('head').append(`
       <meta property="og:type" content="article" />
-      <meta property="og:title" content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta property="og:title" content="${ads[req.params.oglasId].og_title}" />
+      <meta property="og:description" content="${ads[req.params.oglasId].og_description}" />
       <meta property="og:image" content="https://sestavivlado.si/static/koalicija.png" />
       
-      <meta name="twitter:title" content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta name="twitter:title" content="${ads[req.params.oglasId].og_title}" />
+      <meta name="twitter:description" content="${ads[req.params.oglasId].og_description}" />
       <meta name="twitter:image" content="https://sestavivlado.si/static/koalicija.png /">
     `);
 

@@ -1,63 +1,69 @@
 {
   "orgs": [{
+    "name": "CIPRA Slovenija, društvo za varstvo Alp",
+    "link": "http://www.cipra.org/sl"
+  }, {
     "name": "Danes je nov dan",
     "link": "https://danesjenovdan.si"
   }, {
     "name": "Društvo Asociacija",
-    "link": ""
+    "link": "http://www.asociacija.si/si/"
   }, {
     "name": "Društvo Legebitra",
-    "link": ""
+    "link": "https://legebitra.si/"
   }, {
     "name": "Društvo za uveljavljanje enakosti in plularnosti Vita Activa",
-    "link": ""
+    "link": "https://spol.si/"
   }, {
     "name": "Društvo za zaščito živali Ljubljana",
-    "link": ""
+    "link": "http://www.dzzz.si/"
   }, {
     "name": "Ekologi brez meja",
-    "link": ""
+    "link": "http://ebm.si/o/sl"
+  }, {
+    "name": "Fokus, društvo za sonaraven razvoj",
+    "link": "http://focus.si"
   }, {
     "name": "Gibanje za dostojno delo in socialno družbo",
-    "link": ""
+    "link": "https://socialna-druzba.si/ "
   }, {
     "name": "Greenpeace Slovenija",
-    "link": ""
+    "link": "http://www.greenpeace.org/slovenia/si/"
   }, {
     "name": "Iniciativa Mestni zbor",
-    "link": ""
+    "link": "http://www.imz-maribor.org/"
   }, {
     "name": "Inštitut 8. marec",
-    "link": ""
+    "link": "https://www.facebook.com/institut8.marec/"
   }, {
     "name": "IŠSP - Inštitut za študije stanovanj in prostora",
     "link": ""
   }, {
     "name": "Mirovni inštitut",
-    "link": ""
+    "link": "http://www.mirovni-institut.si/"
   }, {
-    "name": "Prostorož",
-    "link": ""
+    "name": "prostoRož",
+    "link": "http://prostoroz.org/"
   }, {
     "name": "Pekarna Magdalenske mreže",
-    "link": ""
+    "link": "http://www.pekarna.org/"
   }, {
     "name": "Sindikat mladi plus",
-    "link": ""
+    "link": "https://www.mladiplus.si/"
   }, {
     "name": "Sindikat prekarcev",
-    "link": ""
+    "link": "http://www.sindikat-prekarcev.si/"
   }, {
     "name": "Slovenska Zveza za Javno Zdravje, Okolje in Tobačno Kontrolo",
-    "link": ""
+    "link": "http://zadihaj.net/"
   }, {
     "name": "Poligon, zavod za razvoj kreativnih industrij",
-    "link": ""
+    "link": "http://www.poligon.si/"
   }, {
     "name": "Umanotera",
-    "link": ""
+    "link": "https://www.umanotera.org/"
   }, {
-    "name": "Zavod Transakcija",
-    "link": ""
+    "name": "Zavod TransAkcija",
+    "link": "http://transakcija.si/"
   }]
 }

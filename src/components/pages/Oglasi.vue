@@ -27,18 +27,19 @@
       </div>
       <div class="ad-container">
         <big-card :image="ads[selectedAd].image">
-          <h2>Podroben opis delovnega mesta - ključne naloge:</h2>
-          <ul>
+          <h2 v-if="ads[selectedAd].firstBullets.length > 0">Podroben opis delovnega mesta - ključne naloge:</h2>
+          <ul v-if="ads[selectedAd].firstBullets.length > 0">
             <li v-for="bullet in ads[selectedAd].firstBullets">{{ bullet }}</li>
           </ul>
-          <h2>Kaj pričakujemo</h2>
-          <ul>
+          <h2 v-if="ads[selectedAd].firstBullets.length > 0">Kaj pričakujemo</h2>
+          <ul v-if="ads[selectedAd].firstBullets.length > 0">
             <li v-for="bullet in ads[selectedAd].secondBullets">{{ bullet }}</li>
           </ul>
-          <h2>Kaj nudimo</h2>
-          <ul>
+          <h2 v-if="ads[selectedAd].firstBullets.length > 0">Kaj nudimo</h2>
+          <ul v-if="ads[selectedAd].firstBullets.length > 0">
             <li v-for="bullet in ads[selectedAd].thirdBullets">{{ bullet }}</li>
           </ul>
+          <p>{{ ads[selectedAd].extra }}</p>
         </big-card>
       </div>
     </div>
@@ -51,12 +52,12 @@
           @click.native="share()"
         ></regular-button>
         <progress-bar
-          :goal="1067"
+          :goal="1124"
           :current="current"
         ></progress-bar>
       </div>
       <div class="cta-jumbo-container">
-        <p class="jumbo-cta">Prejšnja vlada je kar <span>1067 predpisov</span> sprejela brez ustreznega posveta s civilno družbo!</p>
+        <p class="jumbo-cta">Prejšnja vlada je kar <span>1124 predpisov</span> sprejela brez ustreznega posveta s civilno družbo!</p>
         <p class="subjumbo-cta">Vsak od njih je razlog za deljenje tega spletnega mesta na družbenih omrežjih! Skupaj opozorimo prihajajočo vlado, da nam ni vseeno in da nas nihče ne bo utišal!</p>
       </div>
     </div>
@@ -211,6 +212,10 @@ export default {
   .ad-container {
     flex: 3;
 
+    .big-card {
+      min-height: 857px;
+    }
+
     h2 {
       margin-top: 0;
       color: #070c2f;
@@ -227,7 +232,7 @@ export default {
         padding-top: 38px;
       }
     }
-    ul {
+    ul, p {
       color: #070c2f;
       font-family: 'Barlow', sans-serif;
       font-size: 18px;
@@ -264,6 +269,12 @@ export default {
           padding-bottom: 31px;
         }
       }
+    }
+
+    p {
+      padding-top: 20px;
+      padding-right: 150px;
+      margin-top: 0;
     }
   }
 
