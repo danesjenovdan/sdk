@@ -71,5 +71,29 @@ export default {
   text-transform: uppercase;
 
   line-height: 91px;
+
+  #footershare-container {
+    width: 100%;
+    height: 91px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      margin: auto;
+      position: relative;
+      // float: left;
+    }
+
+    button {
+      display: inline-block;
+      position: relative;
+      // float: left;
+      vertical-align: middle;
+      top: -2px;
+    }
+  }
 }
 </style>

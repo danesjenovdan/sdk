@@ -29,8 +29,7 @@ export default {
   box-shadow: none;
   padding: 0;
 
-  display: inline-block;
-  top: -10px;
+  display: block;
 
   margin-left: 15px;
 

@@ -139,6 +139,12 @@ export default {
   &.mnz::after {
     background-image: url('../assets/mnz.svg');
   }
+  &.mnet::after {
+    background-image: url('../assets/mnet.svg');
+  }
+  &.mo::after {
+    background-image: url('../assets/mo.svg');
+  }
 
 }
 </style>

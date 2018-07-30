@@ -1,6 +1,6 @@
 <template>
   <div id="ads-page">
-    <p class="jumbo">Ni prav, da se vlada oblikuje na način trgovanja s pozicijami, funkcijami in močjo, ki je cinično zapakirano v sestake za preverjanje stališč in vsebinsko povezovanje. Če želimo dobro vlado, je treba uveljavljen proces obrniti na glavo in namesto ministrstev za posamezne apetite poiskati vsebinsko najboljše ministrice in ministrice!</p>
+    <p class="jumbo">Ni prav, da se vlada oblikuje na način trgovanja s pozicijami, funkcijami in močjo, ki je cinično zapakirano v sestanke za preverjanje stališč in vsebinsko povezovanje. Če želimo dobro vlado, je treba uveljavljen proces obrniti na glavo in namesto ministrstev za posamezne apetite poiskati vsebinsko najboljše ministrice in ministrice!</p>
     <p class="subjumbo">Če bi vlado sestavljala koalicija civilnodružbenih organizacij, bi kandidate in kandidatke izbirali s pomočjo spodnjih oglasov za delo!</p>
     <div class="major-container dropdown-container">
       <select>
