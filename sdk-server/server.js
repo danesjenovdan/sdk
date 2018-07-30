@@ -10,14 +10,14 @@ const webshot = require('webshot');
 let ogCount = 0;
 
 // Load index.html
-const indexFile = fs.readFileSync(`${__dirname}/sdk/dist/index.html`, 'utf8', ( err, file ) => err ? reject(err) : resolve(file));
+const indexFile = fs.readFileSync(`${__dirname}/../dist/index.html`, 'utf8', ( err, file ) => err ? reject(err) : resolve(file));
 const indexHtml = indexFile.toString();
 
 app.get('/oglas/:oglasId', async ( req, res ) => {
 
   try {
 
-    const analysisId    = req.params.analysisId;
+    // const analysisId    = req.params.analysisId;
     // const templatePath = `${__dirname}/og_templates/snippet.ejs`;
     // const ogImagePath  = `${__dirname}/og_renders/snippet-${snippetId}.png`;
     const $ = cheerio.load(indexHtml);
@@ -25,9 +25,6 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
     // const ogExists = await new Promise(( resolve ) => {
     //   fs.exists(`${__dirname}/og_renders/snippet-${snippetId}.png`, ( exists ) => resolve(exists));
     // });
-
-    // get analysis data from API
-    const analysisData = JSON.parse(await request(`http://admin.besedogled.si/getAnalysisMeta/?id=${analysisId}`));
 
     // if ( !ogExists ) {
     //   console.log(`Og count: ${ogCount}`);
@@ -40,14 +37,12 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
     // <meta property="og:image"          content="${config.URL}/images/snippet-${snippetId}.png" />
     // <meta name="twitter:image" content="${config.URL}/images/snippet-${snippetId}.png">
     $('head').append(`
-      <meta property="og:url"                content="http://besedogled.si/analiza/${analysisId}" />
-      <meta property="og:type"               content="article" />
-      <meta property="og:title"              content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta property="og:image" content="https://sestavivlado.si/static/koalicija.png" />
       
-      <meta name="twitter:title" content="${analysisData.title || 'Analiza brez naslova'}">
-
-      <meta property="og:image"          content="${analysisData.photo}" />
-      <meta name="twitter:image" content="${analysisData.photo}">
+      <meta name="twitter:title" content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta name="twitter:image" content="https://sestavivlado.si/static/koalicija.png /">
     `);
 
     res.send($.html());
@@ -63,7 +58,7 @@ app.get('/oglasi', async ( req, res ) => {
 
   try {
 
-    const analysisId    = req.params.analysisId;
+    // const analysisId    = req.params.analysisId;
     // const templatePath = `${__dirname}/og_templates/snippet.ejs`;
     // const ogImagePath  = `${__dirname}/og_renders/snippet-${snippetId}.png`;
     const $ = cheerio.load(indexHtml);
@@ -73,7 +68,7 @@ app.get('/oglasi', async ( req, res ) => {
     // });
 
     // get analysis data from API
-    const analysisData = JSON.parse(await request(`http://admin.besedogled.si/getAnalysisMeta/?id=${analysisId}`));
+    // const analysisData = JSON.parse(await request(`http://admin.besedogled.si/getAnalysisMeta/?id=${analysisId}`));
 
     // if ( !ogExists ) {
     //   console.log(`Og count: ${ogCount}`);
@@ -81,19 +76,16 @@ app.get('/oglasi', async ( req, res ) => {
     //   renderOg(templatePath, snippetData, ogImagePath);
     // }
 
-    $('title').text(`${analysisData.title || 'Brez naslova'} - Besedogled`);
     $('.removeme').remove();
     // <meta property="og:image"          content="${config.URL}/images/snippet-${snippetId}.png" />
     // <meta name="twitter:image" content="${config.URL}/images/snippet-${snippetId}.png">
     $('head').append(`
-      <meta property="og:url"                content="http://besedogled.si/analiza/${analysisId}" />
-      <meta property="og:type"               content="article" />
-      <meta property="og:title"              content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta property="og:image" content="https://sestavivlado.si/static/koalicija.png" />
       
-      <meta name="twitter:title" content="${analysisData.title || 'Analiza brez naslova'}">
-
-      <meta property="og:image"          content="${analysisData.photo}" />
-      <meta name="twitter:image" content="${analysisData.photo}">
+      <meta name="twitter:title" content="${analysisData.title || 'Analiza brez naslova'}" />
+      <meta name="twitter:image" content="https://sestavivlado.si/static/koalicija.png /">
     `);
 
     res.send($.html());
@@ -105,7 +97,7 @@ app.get('/oglasi', async ( req, res ) => {
 
 });
 
-app.use('/', express.static(`${__dirname}/sdk/dist`));
+app.use('/', express.static(`${__dirname}/../dist`));
 //app.use('/izseki', express.static(`${__dirname}/parlatube/dist`));
 // app.use('/soocenje/:videoId', express.static(`${__dirname}/parlatube/dist`));
 
@@ -127,8 +119,8 @@ app.use('/', express.static(`${__dirname}/sdk/dist`));
 
 // app.use('/images', express.static(`${__dirname}/og_renders`));
 
-app.listen(7061, () => {
-  console.log('Server listening on port 7061');
+app.listen(7062, () => {
+  console.log('Server listening on port 7062');
 });
 
 async function renderOg( templatePath, data, imagePath ) {
