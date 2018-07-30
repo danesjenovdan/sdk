@@ -73,6 +73,8 @@ export default {
 
   line-height: 91px;
 
+  z-index: 10;
+
   #footershare-container {
     width: 100%;
     height: 91px;

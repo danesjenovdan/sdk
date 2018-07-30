@@ -20,6 +20,8 @@ export default {
   width: 100%;
   height: 100%;
 
+  padding-bottom: 140px;
+
   h1 {
     font-family: 'Overpass Mono', monospace;
     font-size: 38px;
