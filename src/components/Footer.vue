@@ -36,9 +36,10 @@ export default {
   },
 
   mounted() {
-    this.$http.post('https://djnd.si/yomamasofat/', { fatmama: document.location.href, }).then((response) => {
-      this.link = response;
-    });
+    // this.$http.post('https://djnd.si/yomamasofat/', { fatmama: document.location.href, }).then((response) => {
+    //   this.link = response;
+    // });
+    this.link = document.location.href;
   },
 
   methods: {
