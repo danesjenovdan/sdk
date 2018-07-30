@@ -45,7 +45,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministrico za infrastrukturo!",
-    "og_description": "Najboljša energija je tista, ki je ne porabimo!"
+    "og_description": "Najboljša energija je tista, ki je ne porabimo!",
+    "og_image": "og-mi"
   }, {
     "title": "Minister za izobraževanje, znanost in šport",
     "image": "mizs",
@@ -84,7 +85,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministra za izobraževanje, znanost in šport!",
-    "og_description": "Pogoj: brez prepisovanja pri diplomi, magisteriju, doktoratu ..."
+    "og_description": "Pogoj: brez prepisovanja pri diplomi, magisteriju, doktoratu ...",
+    "og_image": "og-mizs.png"
   }, {
     "title": "Ministrica za okolje in prostor",
     "image": "mop",
@@ -125,7 +127,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministrico za okolje in prostor!",
-    "og_description": "Prednostna naloga: varovanje okolja pred kapitalom!"
+    "og_description": "Prednostna naloga: varovanje okolja pred kapitalom!",
+    "og_image": "og-mop.png"
   }, {
     "title": "Minister za gospodarski razvoj in tehnologijo",
     "image": "mgrt",
@@ -160,7 +163,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministra za gospodar. razvoj in tehnologijo!",
-    "og_description": "Moto: kdor dela, naj (od tega) tudi jé!"
+    "og_description": "Moto: kdor dela, naj (od tega) tudi jé!",
+    "og_image": "og-mgrt.png"
   }, {
     "title": "Ministrica za kulturo",
     "image": "mk",
@@ -196,7 +200,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministrico za kulturo!",
-    "og_description": "Prva naloga: reorganizacija ministrstva!"
+    "og_description": "Prva naloga: reorganizacija ministrstva!",
+    "og_image": "og-mk.png"
   }, {
     "title": "Minister za delo, družine, socialne zadeve in enake možnosti",
     "image": "mddsz",
@@ -237,7 +242,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministra za delo, družine, soc. zadeve itn.!",
-    "og_description": "Pogoj: 5 let izkušenj v nevladnem sektorju."
+    "og_description": "Pogoj: 5 let izkušenj v nevladnem sektorju.",
+    "og_image": "og-mdds.png"
   }, {
     "title": "Ministrica za zdravje",
     "image": "mz",
@@ -276,7 +282,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministrico za zdravje!",
-    "og_description": "Prednostna naloga: celovita zdravstvena reforma v korist ljudi."
+    "og_description": "Prednostna naloga: celovita zdravstvena reforma v korist ljudi.",
+    "og_image": "og-mz.png"
   }, {
     "title": "Minister za kmetijstvo, gozdarstvo in prehrano",
     "image": "mkgp",
@@ -318,7 +325,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministra za kmet., gozdarstvo in prehrano!",
-    "og_description": "Pričakujemo: spoštovanje in odgovoren odnos do živali in narave."
+    "og_description": "Pričakujemo: spoštovanje in odgovoren odnos do živali in narave.",
+    "og_image": "og-mkgp.png"
   }, {
     "title": "Ministrica za javno upravo",
     "image": "mju",
@@ -357,7 +365,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministrico za javno upravo!",
-    "og_description": "Prednost so izkušnje s čakanjem na upravnih enotah."
+    "og_description": "Prednost so izkušnje s čakanjem na upravnih enotah.",
+    "og_image": "og-mju.png"
   }, {
     "title": "Minister za internet",
     "image": "mnet",
@@ -394,7 +403,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministra za internet!",
-    "og_description": "Moto: dostop do spleta je pravica!"
+    "og_description": "Moto: dostop do spleta je pravica!",
+    "og_image": "og-mnet.png"
   }, {
     "title": "Ministrica za finance",
     "image": "mf",
@@ -433,7 +443,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministrico za finance!",
-    "og_description": "Pogoj: zavedanje, da krize ni povzročila lenoba."
+    "og_description": "Pogoj: zavedanje, da krize ni povzročila lenoba.",
+    "og_image": "og-mf.png"
   }, {
     "title": "Minister za pravosodje",
     "image": "mp",
@@ -463,7 +474,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministra za pravosodje!",
-    "og_description": "Nudimo: orientacijska tekmovanja v sodnih arhivih."
+    "og_description": "Nudimo: orientacijska tekmovanja v sodnih arhivih.",
+    "og_image": "og-mp.png"
   }, {
     "title": "Ministrica za zunanje zadeve",
     "image": "mzz",
@@ -495,7 +507,8 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministrico za zun. zadeve!",
-    "og_description": "Ena ključnih nalog: oblikovanje lastne in avtonomne zunanje politike."
+    "og_description": "Ena ključnih nalog: oblikovanje lastne in avtonomne zunanje politike.",
+    "og_image": "og-mzz.png"
   }, {
     "title": "Minister za notranje zadeve",
     "image": "mnz",
@@ -525,16 +538,18 @@
     ],
     "extra": "",
     "og_title": "Zaposlimo ministra za not. zadeve!",
-    "og_description": "Prva naloga: odstranitev žice in ograj z meje."
+    "og_description": "Prva naloga: odstranitev žice in ograj z meje.",
+    "og_image": "og-mnz.png"
   }, {
     "title": "Ministrica za obrambo",
-    "image": "mnz",
+    "image": "mo",
     "selected": false,
     "firstBullets": [],
     "secondBullets": [],
     "thirdBullets": [],
     "extra": "Verjamemo, da mora Slovenija postati mirovna in nevtralna država, zato Ministrstva za obrambo ne potrebujemo. Slovenija izstopi iz NATO, vojska se v obstoječi obliki ukine, kadri in oprema se prenesejo na civilno zaščito, ta pa bo v pristojnosti Ministrstva za notranje zadeve. Te službe torej ne ponujamo.",
     "og_title": "Zaposlimo ministrico za obrambo?",
-    "og_description": "Prednostna naloga: ukinitev vojske."
+    "og_description": "Prednostna naloga: ukinitev vojske.",
+    "og_image": "og-mo.png"
   }]
 }
