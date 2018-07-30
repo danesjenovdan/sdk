@@ -43,11 +43,11 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
       <meta property="og:type" content="article" />
       <meta property="og:title" content="${ads[parseInt(req.params.oglasId)].og_title}" />
       <meta property="og:description" content="${ads[parseInt(req.params.oglasId)].og_description}" />
-      <meta property="og:image" content="https://sestavivlado.si/static/og-vsi.png" />
+      <meta property="og:image" content="https://sestavivlado.si/static/${ads[parseInt(req.params.oglasId)].og_image}" />
       
       <meta name="twitter:title" content="${ads[parseInt(req.params.oglasId)].og_title}" />
       <meta name="twitter:description" content="${ads[parseInt(req.params.oglasId)].og_description}" />
-      <meta name="twitter:image" content="https://sestavivlado.si/static/og-vsi.png /">
+      <meta name="twitter:image" content="https://sestavivlado.si/static/${ads[parseInt(req.params.oglasId)].og_image} /">
     `);
 
     res.send($.html());
