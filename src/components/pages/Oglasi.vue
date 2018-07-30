@@ -122,8 +122,8 @@ export default {
   },
 
   mounted() {
-    this.$http.get(`https://graph.facebook.com/?id=${document.location.href}`).then((response) => {
-      this.current = response.body.share.share_count;
+    this.$http.get(`https://graph.facebook.com/?id=https://sestavivlado.si/`).then((response) => {
+      this.current = response.body.share.share_count + 0;
     });
   },
 };
