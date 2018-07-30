@@ -15,7 +15,7 @@ const indexHtml = indexFile.toString();
 
 // load ads
 const jsonFile = fs.readFileSync(`${__dirname}/../src/assets/ads.json`, 'utf8', (err, file) => err ? reject(err) : resolve(file));
-const ads = JSON.parse(jsonFile.toString());
+const ads = JSON.parse(jsonFile.toString()).ads;
 
 console.log(ads);
 
