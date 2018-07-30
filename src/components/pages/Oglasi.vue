@@ -31,15 +31,15 @@
         <big-card :image="ads[selectedAd].image">
           <h2 v-if="ads[selectedAd].firstBullets.length > 0">Podroben opis delovnega mesta - ključne naloge:</h2>
           <ul v-if="ads[selectedAd].firstBullets.length > 0">
-            <li v-for="bullet in ads[selectedAd].firstBullets">{{ bullet }}</li>
+            <li v-for="bullet in ads[selectedAd].firstBullets" v-html="bullet"></li>
           </ul>
           <h2 v-if="ads[selectedAd].firstBullets.length > 0">Kaj pričakujemo</h2>
           <ul v-if="ads[selectedAd].firstBullets.length > 0">
-            <li v-for="bullet in ads[selectedAd].secondBullets">{{ bullet }}</li>
+            <li v-for="bullet in ads[selectedAd].secondBullets" v-html="bullet"></li>
           </ul>
           <h2 v-if="ads[selectedAd].firstBullets.length > 0">Kaj nudimo</h2>
           <ul v-if="ads[selectedAd].firstBullets.length > 0">
-            <li v-for="bullet in ads[selectedAd].thirdBullets">{{ bullet }}</li>
+            <li v-for="bullet in ads[selectedAd].thirdBullets" v-html="bullet"></li>
           </ul>
           <p>{{ ads[selectedAd].extra }}</p>
         </big-card>
@@ -302,6 +302,7 @@ export default {
       padding-top: 20px;
       padding-right: 150px;
       margin-top: 0;
+      padding-top: 350px;
     }
   }
 
@@ -436,5 +437,11 @@ export default {
   #footer.oglas {
     position: relative;
     width: 100%;
+  }
+
+  ul {
+    a {
+        color: #26a6b5;
+      }
   }
 </style>

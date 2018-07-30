@@ -145,6 +145,11 @@ export default {
     #party-buttons {
       flex: 1;
     }
+
+    .regular-button {
+      margin-bottom: 10px;
+    }
+
     #dz-container {
       flex: 3;
 
