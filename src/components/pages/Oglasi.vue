@@ -58,7 +58,7 @@
         ></progress-bar>
       </div>
       <div class="cta-jumbo-container">
-        <p class="jumbo-cta">Prejšnja vlada je kar <span>1124 predpisov</span> sprejela brez ustreznega posveta s civilno družbo!</p>
+        <p class="jumbo-cta">Prejšnja vlada je kar <a href="https://www.cnvos.si/stevec-krsitev/" target="_blank">1124 predpisov</a> sprejela brez ustreznega posveta s civilno družbo!</p>
         <p class="subjumbo-cta">Vsak od njih je razlog za deljenje tega spletnega mesta na družbenih omrežjih! Skupaj opozorimo prihajajočo vlado, da nam ni vseeno in da nas nihče ne bo utišal!</p>
       </div>
     </div>
@@ -368,7 +368,7 @@ export default {
         line-height: 40px;
       }
 
-      span {
+      a {
         color: #26a6b5;
       }
     }
