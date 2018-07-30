@@ -197,9 +197,9 @@ export default {
   }
 
   .navigation-container {
-    flex: 0;
+    flex: 0 0 auto;
     width: 324px;
-    padding-right: 35px;
+    // padding-right: 35px;
     // padding-right: 124px;
 
     .party-button {
