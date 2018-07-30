@@ -10,7 +10,7 @@ const webshot = require('webshot');
 let ogCount = 0;
 
 // Load index.html
-const indexFile = fs.readFileSync(`${__dirname}/../dist/index.html`, 'utf8', ( err, file ) => err ? reject(err) : resolve(file));
+const indexFile = fs.readFileSync(`${__dirname}/../dist/index.html`, 'utf8', (err, file) => err ? reject(err) : resolve(file));
 const indexHtml = indexFile.toString();
 
 // load ads
@@ -22,7 +22,6 @@ console.log(ads);
 app.get('/oglas/:oglasId', async ( req, res ) => {
 
   try {
-
     // const analysisId    = req.params.analysisId;
     // const templatePath = `${__dirname}/og_templates/snippet.ejs`;
     // const ogImagePath  = `${__dirname}/og_renders/snippet-${snippetId}.png`;
@@ -38,18 +37,18 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
     //   renderOg(templatePath, snippetData, ogImagePath);
     // }
 
-    $('title').text(`${ads[req.params.oglasId].og_title}`);
+    $('title').text(`${ads[parseInt(req.params.oglasId)].og_title}`);
     $('.removeme').remove();
     // <meta property="og:image"          content="${config.URL}/images/snippet-${snippetId}.png" />
     // <meta name="twitter:image" content="${config.URL}/images/snippet-${snippetId}.png">
     $('head').append(`
       <meta property="og:type" content="article" />
-      <meta property="og:title" content="${ads[req.params.oglasId].og_title}" />
-      <meta property="og:description" content="${ads[req.params.oglasId].og_description}" />
+      <meta property="og:title" content="${ads[parseInt(req.params.oglasId)].og_title}" />
+      <meta property="og:description" content="${ads[parseInt(req.params.oglasId)].og_description}" />
       <meta property="og:image" content="https://sestavivlado.si/static/koalicija.png" />
       
-      <meta name="twitter:title" content="${ads[req.params.oglasId].og_title}" />
-      <meta name="twitter:description" content="${ads[req.params.oglasId].og_description}" />
+      <meta name="twitter:title" content="${ads[parseInt(req.params.oglasId)].og_title}" />
+      <meta name="twitter:description" content="${ads[parseInt(req.params.oglasId)].og_description}" />
       <meta name="twitter:image" content="https://sestavivlado.si/static/koalicija.png /">
     `);
 
