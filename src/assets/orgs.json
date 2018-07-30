@@ -1,0 +1,63 @@
+{
+  "orgs": [{
+    "name": "Danes je nov dan",
+    "link": "https://danesjenovdan.si"
+  }, {
+    "name": "Društvo Asociacija",
+    "link": ""
+  }, {
+    "name": "Društvo Legebitra",
+    "link": ""
+  }, {
+    "name": "Društvo za uveljavljanje enakosti in plularnosti Vita Activa",
+    "link": ""
+  }, {
+    "name": "Društvo za zaščito živali Ljubljana",
+    "link": ""
+  }, {
+    "name": "Ekologi brez meja",
+    "link": ""
+  }, {
+    "name": "Gibanje za dostojno delo in socialno družbo",
+    "link": ""
+  }, {
+    "name": "Greenpeace Slovenija",
+    "link": ""
+  }, {
+    "name": "Iniciativa Mestni zbor",
+    "link": ""
+  }, {
+    "name": "Inštitut 8. marec",
+    "link": ""
+  }, {
+    "name": "IŠSP - Inštitut za študije stanovanj in prostora",
+    "link": ""
+  }, {
+    "name": "Mirovni inštitut",
+    "link": ""
+  }, {
+    "name": "Prostorož",
+    "link": ""
+  }, {
+    "name": "Pekarna Magdalenske mreže",
+    "link": ""
+  }, {
+    "name": "Sindikat mladi plus",
+    "link": ""
+  }, {
+    "name": "Sindikat prekarcev",
+    "link": ""
+  }, {
+    "name": "Slovenska Zveza za Javno Zdravje, Okolje in Tobačno Kontrolo",
+    "link": ""
+  }, {
+    "name": "Poligon, zavod za razvoj kreativnih industrij",
+    "link": ""
+  }, {
+    "name": "Umanotera",
+    "link": ""
+  }, {
+    "name": "Zavod Transakcija",
+    "link": ""
+  }]
+}
