@@ -96,7 +96,7 @@ export default {
       ads: ads.ads,
       selectedAd: this.$route.params.oglasId | 0,
       orgs: orgs.orgs,
-      current: 50,
+      current: 236,
       // og.title,
       // og.text,
       // og.hashtags,
@@ -123,7 +123,7 @@ export default {
 
   mounted() {
     this.$http.get(`https://graph.facebook.com/?id=https://sestavivlado.si/`).then((response) => {
-      this.current = response.body.share.share_count + 0;
+      this.current = response.body.share.share_count + 114;
     });
   },
 };
@@ -286,7 +286,7 @@ export default {
       li {
         background:url('../../assets/arrow.png') no-repeat 0 8px;
         padding-left: 40px;
-        
+
         &:last-child {
           padding-bottom: 31px;
         }
@@ -319,7 +319,7 @@ export default {
     background-size: 60%;
 
     margin-top: 60px;
-    
+
     position: relative;
 
     @media (max-width: 992px) {
