@@ -1,6 +1,6 @@
 <template>
   <div class="tiny-card">
-    <img :src="`/static/sad/${imgSrc}`">
+    <img :src="`/sdk/static/sad/${imgSrc}`">
     <p class="caption">{{ caption }}</p>
   </div>
 </template>
