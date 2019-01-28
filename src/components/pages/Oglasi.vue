@@ -44,7 +44,11 @@
         </big-card>
       </div>
     </div>
-    <p class="jumbo">Nemogoče je najti kadre, ki bi imeli odgovore na vsa vprašanja in pereče dileme, zato bodočega mandatarja ali mandatarko pozivamo, naj prekine trend hitrega sprejemanja zakonov z izogibanjem javni razpravi in z nami vzpostavi konstruktiven dialog!</p>
+    <p class="jumbo">
+      Nemogoče je najti kadre, ki bi imeli odgovore na vsa vprašanja in pereče dileme,
+      zato bodočega mandatarja ali mandatarko pozivamo, naj prekine trend hitrega sprejemanja
+      zakonov z izogibanjem javni razpravi in z nami vzpostavi konstruktiven dialog!
+    </p>
     <div class="major-container cta-container">
       <div class="cta">
         <regular-button
@@ -58,8 +62,14 @@
         ></progress-bar>
       </div>
       <div class="cta-jumbo-container">
-        <p class="jumbo-cta">Prejšnja vlada je kar <a href="https://www.cnvos.si/stevec-krsitev/" target="_blank">1124 predpisov</a> sprejela brez ustreznega posveta s civilno družbo!</p>
-        <p class="subjumbo-cta">Vsak od njih je razlog za deljenje tega spletnega mesta na družbenih omrežjih! Skupaj opozorimo prihajajočo vlado, da nam ni vseeno in da nas nihče ne bo utišal!</p>
+        <p class="jumbo-cta">
+          Prejšnja vlada je kar <a href="https://www.cnvos.si/stevec-krsitev/" target="_blank">1124 predpisov</a>
+          sprejela brez ustreznega posveta s civilno družbo!
+        </p>
+        <p class="subjumbo-cta">
+          Vsak od njih je razlog za deljenje tega spletnega mesta na družbenih omrežjih!
+          Skupaj opozorimo prihajajočo vlado, da nam ni vseeno in da nas nihče ne bo utišal!
+        </p>
       </div>
     </div>
     <div class="major-container linki">
@@ -69,6 +79,7 @@
         :href="org.link"
         target="_blank"
         v-if="org.link !== ''"
+        v-bind:key="org.id"
       >{{ org.name }}</a>
       <span v-else>{{ org.name }}</span>
     </div>
@@ -76,11 +87,11 @@
 </template>
 
 <script>
-import PartyButton from '../PartyButton';
-import BigCard from '../BigCard';
-import RegularButton from '../RegularButton';
-import ProgressBar from '../ProgressBar';
-import TheFooter from '../Footer';
+import PartyButton from '../PartyButton.vue';
+import BigCard from '../BigCard.vue';
+import RegularButton from '../RegularButton.vue';
+import ProgressBar from '../ProgressBar.vue';
+import TheFooter from '../Footer.vue';
 
 import ads from '../../assets/ads.json';
 import orgs from '../../assets/orgs.json';
@@ -89,12 +100,17 @@ import orgs from '../../assets/orgs.json';
 export default {
   name: 'Oglasi',
 
-  components: { PartyButton, BigCard, RegularButton, ProgressBar, TheFooter },
+  components: {
+    PartyButton,
+    BigCard,
+    RegularButton,
+    ProgressBar,
+  },
 
   data() {
     return {
       ads: ads.ads,
-      selectedAd: this.$route.params.oglasId | 0,
+      selectedAd: this.$route.params.oglasId || 0,
       orgs: orgs.orgs,
       current: 236,
       // og.title,
@@ -122,7 +138,7 @@ export default {
   },
 
   mounted() {
-    this.$http.get(`https://graph.facebook.com/?id=https://sestavivlado.si/`).then((response) => {
+    this.$http.get('https://graph.facebook.com/?id=https://sestavivlado.si/').then((response) => {
       this.current = response.body.share.share_count + 514 + 39;
     });
   },

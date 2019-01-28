@@ -6,12 +6,11 @@
 </template>
 
 <script>
-import Builder from '../Builder';
-import TheFooter from '../Footer';
+import Builder from '../Builder.vue';
 
 export default {
   name: 'Build',
-  components: { Builder, TheFooter },
+  components: { Builder },
 };
 </script>
 

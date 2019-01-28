@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import ShareButton from './ShareButton';
+import ShareButton from './ShareButton.vue';
 
 export default {
   name: 'TheFooter',
@@ -44,11 +44,12 @@ export default {
 
   methods: {
     fbShare() {
-      const url = `https://www.facebook.com/dialog/feed?app_id=833917570125908&redirect_uri=${encodeURIComponent(document.location.href)}&link=${encodeURIComponent(document.location.href)}&ref=responsive`;
+      const url = `https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=${encodeURIComponent(document.location.href)}&link=${encodeURIComponent(document.location.href)}&ref=responsive`;
       window.open(url, '_blank');
     },
     twShare() {
-      const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(this.text + ' ' + this.hashtags + ' ' + this.link)}`;
+      const text = `${this.text} ${this.hashtags} ${this.link}`;
+      const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     },
     mailShare() {

@@ -7,12 +7,8 @@
 </template>
 
 <script>
-import RegularButton from './RegularButton';
-
 export default {
   name: 'SmallCard',
-
-  components: { RegularButton },
 
   props: {
     image: {

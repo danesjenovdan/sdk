@@ -50,10 +50,10 @@
 </template>
 
 <script>
-import PartyButton from './PartyButton';
-import DZVec from './DZ';
-import TinyCard from './TinyCard';
-import RegularButton from './RegularButton';
+import PartyButton from './PartyButton.vue';
+import DZVec from './DZ.vue';
+import TinyCard from './TinyCard.vue';
+import RegularButton from './RegularButton.vue';
 import dz from '../assets/dz.json';
 
 export default {
@@ -111,7 +111,8 @@ export default {
       console.log(firstindex, secondindex);
       if (firstindex !== secondindex) {
         this.chosenParties = this.parties.filter((party) => {
-          return (party.acronym === this.selectedParties[firstindex]) || (party.acronym === this.selectedParties[secondindex]);
+          return (party.acronym === this.selectedParties[firstindex])
+          || (party.acronym === this.selectedParties[secondindex]);
         });
       } else {
         this.chooseParties();

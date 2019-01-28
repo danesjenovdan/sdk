@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Build from '@/components/pages/Build';
-import Oglasi from '@/components/pages/Oglasi';
+import Build from '@/components/pages/Build.vue';
+import Oglasi from '@/components/pages/Oglasi.vue';
 
 Vue.use(Router);
 
