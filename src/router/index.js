@@ -6,7 +6,7 @@ import Oglasi from '@/components/pages/Oglasi.vue';
 Vue.use(Router);
 
 const router = new Router({
-  mode: 'hash',
+  mode: 'history',
   base: '/sdk/',
   routes: [
     {

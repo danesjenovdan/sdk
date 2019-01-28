@@ -17,7 +17,7 @@ const indexHtml = indexFile.toString();
 const jsonFile = fs.readFileSync(`${__dirname}/../src/assets/ads.json`, 'utf8', (err, file) => err ? reject(err) : resolve(file));
 const ads = JSON.parse(jsonFile.toString()).ads;
 
-app.get('/oglas/:oglasId', async ( req, res ) => {
+app.get('/sdk/oglas/:oglasId', async ( req, res ) => {
 
   try {
     // const analysisId    = req.params.analysisId;
@@ -60,7 +60,7 @@ app.get('/oglas/:oglasId', async ( req, res ) => {
 
 });
 
-app.use('/', express.static(`${__dirname}/../dist`));
+app.use('/sdk/', express.static(`${__dirname}/../dist`));
 //app.use('/izseki', express.static(`${__dirname}/parlatube/dist`));
 // app.use('/soocenje/:videoId', express.static(`${__dirname}/parlatube/dist`));
 
