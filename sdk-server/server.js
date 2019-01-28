@@ -60,27 +60,51 @@ app.get('/sdk/oglas/:oglasId', async ( req, res ) => {
 
 });
 
-app.use('/sdk/', express.static(`${__dirname}/../dist`));
-//app.use('/izseki', express.static(`${__dirname}/parlatube/dist`));
-// app.use('/soocenje/:videoId', express.static(`${__dirname}/parlatube/dist`));
+app.get('/sdk/', async ( req, res ) => {
+  try {
+    // const analysisId    = req.params.analysisId;
+    // const templatePath = `${__dirname}/og_templates/snippet.ejs`;
+    // const ogImagePath  = `${__dirname}/og_renders/snippet-${snippetId}.png`;
+    const $ = cheerio.load(indexHtml);
 
-// app.get('/embed/:snippetId', async ( req, res ) => {
-//   try {
+    // const ogExists = await new Promise(( resolve ) => {
+    //   fs.exists(`${__dirname}/og_renders/snippet-${snippetId}.png`, ( exists ) => resolve(exists));
+    // });
 
-//     const $         = cheerio.load(indexHtml);
+    // if ( !ogExists ) {
+    //   console.log(`Og count: ${ogCount}`);
+    //   ogCount++;
+    //   renderOg(templatePath, snippetData, ogImagePath);
+    // }
 
-//     $('head').append(`<script src="https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.contentWindow.min.js"></script>`);
+    $('title').text('Sestavi vlado!');
+    $('.removeme').remove();
+    // <meta property="og:image"          content="${config.URL}/images/snippet-${snippetId}.png" />
+    // <meta name="twitter:image" content="${config.URL}/images/snippet-${snippetId}.png">
+    $('head').append(`
+      <meta name="description" content="Sestavljanje koalicije ne sme biti kupčkanje glasov in tešenje posameznih interesov. Preizkusi se kot mandatar/-ka!">
+      <meta name="author" content="Danes je nov dan, Inštitut za druga vprašanja">
+      <link rel="shortcut icon" href="/sdk/static/favicon.png">
 
-//     res.send($.html());
-//   } catch ( err ) {
-//     res.status(400).send('Something went wrong');
-//   }
-// });
+      <meta class="removeme" property="og:title" content="Ne iščemo ministrstev, ampak ministre!" />
+      <meta class="removeme" property="og:type" content="article" />
+      <meta class="removeme" property="og:description" content="Sestavljanje koalicije ne sme biti kupčkanje glasov in tešenje posameznih interesov. Preizkusi se kot mandatar/-ka!" />
+      <meta class="removeme" property="og:image" content="https://sestavivlado.si/static/og-koalicija.png" />
 
-// // app.use('/embed/:snippetId', express.static(`${__dirname}/parlatube/dist`));
+      <meta name="twitter:title" content="Ne iščemo ministrstev, ampak ministre!" />
+      <meta name="twitter:description" content="Sestavljanje koalicije ne sme biti kupčkanje glasov in tešenje posameznih interesov. Preizkusi se kot mandatar/-ka!" />
+      <meta name="twitter:image" content="https://sestavivlado.si/static/og-koalicija.png" />
+      <meta name="twitter:card" content="summary_large_image">
+    `);
 
+    res.send($.html());
+  } catch (err) {
+    console.log(err);
+    res.status(400).send('Something went wrong');
+  }
+});
 
-// app.use('/images', express.static(`${__dirname}/og_renders`));
+// app.use('/sdk/', express.static(`${__dirname}/../dist`));
 
 app.listen(7062, () => {
   console.log('Server listening on port 7062');
