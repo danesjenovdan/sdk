@@ -104,7 +104,7 @@ app.get('/sdk/', async ( req, res ) => {
   }
 });
 
-// app.use('/sdk/', express.static(`${__dirname}/../dist`));
+app.use('/sdk/', express.static(`${__dirname}/../dist`));
 
 app.listen(7062, () => {
   console.log('Server listening on port 7062');
