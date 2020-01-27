@@ -362,7 +362,7 @@
   }], "parties": [{
     "name": "Slovenska demokratska stranka",
     "acronym": "SDS",
-    "seats": 25,
+    "seats": 26,
     "loserImg": "janez.png",
     "loserText": "Janez je žalosten, ker ne more vladati sam."
   }, {
@@ -410,7 +410,7 @@
   }, {
     "name": "Slovenska nacionalna stranka",
     "acronym": "SNS",
-    "seats": 4,
+    "seats": 3,
     "loserImg": "zmago.png",
     "loserText": "Zmago je žalosten, ker ne more biti minister za kulturo."
   }, {

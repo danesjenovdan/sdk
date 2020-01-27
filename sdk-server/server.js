@@ -86,14 +86,14 @@ app.get('/sdk/', async ( req, res ) => {
       <meta name="author" content="Danes je nov dan, Inštitut za druga vprašanja">
       <link rel="shortcut icon" href="/sdk/static/favicon.png">
 
-      <meta class="removeme" property="og:title" content="Ne iščemo ministrstev, ampak ministre!" />
+      <meta class="removeme" property="og:title" content="Sestavi vlado" />
       <meta class="removeme" property="og:type" content="article" />
       <meta class="removeme" property="og:description" content="Sestavljanje koalicije ne sme biti kupčkanje glasov in tešenje posameznih interesov. Preizkusi se kot mandatar/-ka!" />
-      <meta class="removeme" property="og:image" content="https://sestavivlado.si/static/og-koalicija.png" />
+      <meta class="removeme" property="og:image" content="https://danesjenovdan.si/sdk/static/og-koalicija.jpg" />
 
-      <meta name="twitter:title" content="Ne iščemo ministrstev, ampak ministre!" />
+      <meta name="twitter:title" content="Sestavi vlado" />
       <meta name="twitter:description" content="Sestavljanje koalicije ne sme biti kupčkanje glasov in tešenje posameznih interesov. Preizkusi se kot mandatar/-ka!" />
-      <meta name="twitter:image" content="https://sestavivlado.si/static/og-koalicija.png" />
+      <meta name="twitter:image" content="https://danesjenovdan.si/sdk/static/og-koalicija.jpg" />
       <meta name="twitter:card" content="summary_large_image">
     `);
 
