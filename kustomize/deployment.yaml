@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sdk
+  labels:
+    app: sdk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sdk
+  template:
+    metadata:
+      labels:
+        app: sdk
+    spec:
+      containers:
+        - name: sdk
+          image: sdk
+          ports:
+            - containerPort: 7062
+          resources:
+            requests:
+              memory: 50Mi
+              cpu: 50m
+            limits:
+              memory: 50Mi
+              cpu: 50m

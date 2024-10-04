@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: sdk
+resources:
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+images:
+  - name: sdk
+    newName: rg.fr-par.scw.cloud/djnd/sdk
+    newTag: '6d6f1aaa5acdc6a106dcd91d477b2243432455f7'
