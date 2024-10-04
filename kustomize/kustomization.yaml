@@ -8,4 +8,4 @@ resources:
 images:
   - name: sdk
     newName: rg.fr-par.scw.cloud/djnd/sdk
-    newTag: '6d6f1aaa5acdc6a106dcd91d477b2243432455f7'
+    newTag: 'a37baabd11413971c022852cfd48c2a4d5106954'
