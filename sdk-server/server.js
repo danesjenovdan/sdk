@@ -2,10 +2,10 @@ const express = require('express');
 const app     = express();
 const cheerio = require('cheerio');
 const fs      = require('fs');
-const config  = require('./config');
+// const config  = require('./config');
 const request = require('request-promise-native');
 const ejs     = require('ejs');
-const webshot = require('webshot');
+// const webshot = require('webshot');
 
 let ogCount = 0;
 
@@ -17,7 +17,7 @@ const indexHtml = indexFile.toString();
 const jsonFile = fs.readFileSync(`${__dirname}/../src/assets/ads.json`, 'utf8', (err, file) => err ? reject(err) : resolve(file));
 const ads = JSON.parse(jsonFile.toString()).ads;
 
-app.get('/sdk/oglas/:oglasId', async ( req, res ) => {
+app.get('/oglas/:oglasId', async ( req, res ) => {
 
   try {
     // const analysisId    = req.params.analysisId;
@@ -60,7 +60,7 @@ app.get('/sdk/oglas/:oglasId', async ( req, res ) => {
 
 });
 
-app.get('/sdk/', async ( req, res ) => {
+app.get('/', async ( req, res ) => {
   try {
     // const analysisId    = req.params.analysisId;
     // const templatePath = `${__dirname}/og_templates/snippet.ejs`;
@@ -104,7 +104,7 @@ app.get('/sdk/', async ( req, res ) => {
   }
 });
 
-app.use('/sdk/', express.static(`${__dirname}/../dist`));
+app.use('/', express.static(`${__dirname}/../dist`));
 
 app.listen(7062, () => {
   console.log('Server listening on port 7062');
