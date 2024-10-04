@@ -1,5 +1,5 @@
 # build stage image
-FROM node:16-alpine
+FROM node:14-alpine
 
 WORKDIR /app
 
