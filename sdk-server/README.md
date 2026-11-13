@@ -7,9 +7,9 @@ Serves the parlatube project and appends og tags, renders images and other serve
 - NodeJS >= 8 ( uses async, await )
 - Supervisor `$ npm i supervisor -g`
 
-## Installation 
+## Installation
 
-`$ yarn install`
+`$ npm install`
 
 ## Running
 
